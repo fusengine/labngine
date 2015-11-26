@@ -10,4 +10,4 @@ vim, wget, curl, git, vim, openssh-server
 zip, unzip, htop, supervisor
 ```
 
-&copy; 2015 [Fusengine](http://fusengine.com)
+\#&copy; 2015 [Fusengine](http://fusengine.com)
