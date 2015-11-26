@@ -1,4 +1,4 @@
-FROM fusengine/ubuntu-upstart
+FROM labengine/php
 MAINTAINER Fusengine <info@fusengine.ch>
 
 RUN apt-get update
