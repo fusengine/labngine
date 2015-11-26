@@ -1,13 +1,10 @@
 FROM fusengine/php
 MAINTAINER Fusengine <info@fusengine.ch>
 
+ENV COMPOSER_VERSION 1.0.0-alpha8
 
 # Install Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN composer global require "laravel/installer=~1.1"
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer --version=${COMPOSER_VERSION}
 
-# Set up the application directory.
-WORKDIR /app
-
-# Set up the command arguments
-ENTRYPOINT ["composer", "--ansi"]
+# Display version information
+RUN composer --version
