@@ -1,6 +1,5 @@
-![Alt text](http://fusengine.ch/img/centos.png)
+![Alt text](http://fusengine.ch/img/centos.svg)
 ===============================================
-
 
 This is centos latest to update and upgrade
 
