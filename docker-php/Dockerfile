@@ -1,34 +1,29 @@
 FROM labengine/ubuntu-upstart
 MAINTAINER Fusengine <info@fusengine.ch>
 
-RUN apt-get update
-RUN apt-get install -y \
-              php5-cli \
-            	php5-json \
-            	php5-gd \
-            	php5-readline \
-            	php5-curl \
-              php5-geoip \
-              php5-imagick \
-              php5-imap \
-              php5-ldap \
-          	  php5-mcrypt \
-              php5-json \
-              php5-memcache \
-              php5-memcached \
-              php5-mcrypt \
-              php5-mongo \
-              php5-mssql \
-              php5-mysql \
-              php5-pgsql \
-              php5-redis \
-              php5-sqlite
+RUN apt-get update && apt-get install -y \
+  php5-cli \
+  php5-curl \
+  php5-intl \
+  php5-mongo \
+  php5-mysqlnd \
+  php5-xdebug \
+  php5-xsl
 
-# Remove temp files
+# Cleanup
 RUN apt-get clean
 
-# Enable modules
-RUN php5enmod readline mcrypt mongo mssql pgsql sqlite3 redis
+# Upgrade
+RUN apt-get upgrade -y
 
-# Default command
-CMD ["/usr/bin/php"]
+# Add additional php ini
+COPY php_additional.ini /etc/php5/cli/conf.d/
+
+# Copy entrypoint
+COPY ./docker-entrypoint.sh /
+
+# Entrypoint
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+# php command
+CMD ["php", "-a"]
