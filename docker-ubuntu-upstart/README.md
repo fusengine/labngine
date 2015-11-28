@@ -1,4 +1,4 @@
-![Alt text](http://www.fusengine.ch/img/ubuntu.png)
+![Alt text](http://www.fusengine.ch/img/ubuntu.svg)
 ===================================================
 
 This is Ubuntu-upstart to update and upgrade

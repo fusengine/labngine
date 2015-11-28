@@ -1,4 +1,4 @@
-![Alt text](http://fusengine.ch/img/php-base.png)
+![Alt text](http://fusengine.ch/img/php-base.svg)
 =================================================
 
 My env php5

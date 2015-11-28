@@ -1,4 +1,4 @@
-![Alt text](http://fusengine.ch/img/debian.png)
+![Alt text](http://fusengine.ch/img/debian.svg)
 ===============================================
 
 This is debian latest to update and upgrade

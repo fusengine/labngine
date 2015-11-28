@@ -1,4 +1,4 @@
-![Alt text](http://fusengine.ch/img/ubuntu2.png)
+![Alt text](http://fusengine.ch/img/ubuntu2.svg)
 ================================================
 
 This is ubuntu latest to update and upgrade
