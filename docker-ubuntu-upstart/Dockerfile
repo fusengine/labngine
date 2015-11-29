@@ -14,7 +14,8 @@ RUN apt-get install -y \
                   zip \
                   unzip \
                   htop \
-                  supervisor
+                  supervisor \
+                  build-essential
 
 # Upgrade
 RUN apt-get dist-upgrade -y

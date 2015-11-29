@@ -14,7 +14,9 @@ RUN apt-get install -yqq \
                     zip \
                     unzip \
                     htop \
-                    supervisor
+                    supervisor \
+                    build-essential
+                    
 # Update
 RUN apt-get upgrade -y
 
