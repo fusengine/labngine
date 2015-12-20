@@ -15,7 +15,9 @@ RUN apt-get install -y \
                   unzip \
                   htop \
                   supervisor \
-                  build-essential
+                  build-essential \
+                  software-properties-common \
+                  python-software-properties
 
 # Upgrade
 RUN apt-get dist-upgrade -y
