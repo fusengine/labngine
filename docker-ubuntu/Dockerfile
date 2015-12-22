@@ -3,6 +3,11 @@ MAINTAINER Fusengine <info@fusengine.ch>
 
 ENV DEBIAN_FRONTEND noninteractive
 
+# Add Key to php7 && Add repos to install php 7
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0x4f4ea0aae5267a6c && \
+    apt-add-repository 'deb http://ppa.launchpad.net/ondrej/php-7.0/ubuntu trusty main '
+
+
 # Update
 RUN apt-get update
 

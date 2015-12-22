@@ -7,7 +7,7 @@ This is Ubuntu-upstart to update and upgrade
 
 ```
 vim, wget, curl, git, vim, openssh-server
-zip, unzip, htop, supervisor
+zip, unzip, htop, supervisor, php7
 ```
 
 &copy; 2015 [Fusengine](http://fusengine.com)
