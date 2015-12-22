@@ -21,7 +21,8 @@ RUN apt-get install -y \
                   supervisor \
                   build-essential \
                   software-properties-common \
-                  python-software-properties
+                  python-software-properties \
+                  language-pack-en-base
 
 # Upgrade
 RUN apt-get dist-upgrade -y
