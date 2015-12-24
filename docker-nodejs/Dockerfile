@@ -16,6 +16,9 @@ RUN apt-get update
 # Intall Nodejs
 RUN apt-get install -y nodejs
 
+# Install grunt-cli
+RUN npm install -g grunt-cli
+
 # Upgrade and dist-upgrade
 RUN apt-get dist-upgrade -y && apt-get upgrade -y
 
