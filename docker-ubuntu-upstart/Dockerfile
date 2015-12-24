@@ -29,7 +29,7 @@ RUN apt-get install -y \
 RUN apt-get dist-upgrade -y && apt-get upgrade -y
 
 RUN echo '================================================================='
-RUN figlet FUSENGINE Nodejs && \
+RUN figlet FUSENGINE ubuntu-upstart&& \
     echo 'fusengine.ch  info@fusengine.ch' && \
     echo '' && \
     echo '================================================================='

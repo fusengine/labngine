@@ -30,7 +30,7 @@ RUN apt-get install -y \
 RUN apt-get dist-upgrade -y
 
 RUN echo '================================================================='
-RUN figlet FUSENGINE Nodejs && \
+RUN figlet FUSENGINE Ubuntu && \
     echo 'fusengine.ch  info@fusengine.ch' && \
     echo '' && \
     echo '================================================================='

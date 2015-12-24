@@ -22,7 +22,7 @@ RUN apt-get install -yqq \
 
 # Update
 RUN echo '================================================================='
-RUN figlet FUSENGINE Nodejs && \
+RUN figlet FUSENGINE debian && \
     echo 'fusengine.ch  info@fusengine.ch' && \
     echo '' && \
     echo '================================================================='
