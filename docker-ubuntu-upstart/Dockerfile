@@ -18,6 +18,7 @@ RUN apt-get install -y \
                   zip \
                   unzip \
                   htop \
+                  figlet \
                   supervisor \
                   build-essential \
                   software-properties-common \
@@ -25,7 +26,13 @@ RUN apt-get install -y \
                   language-pack-en-base
 
 # Upgrade
-RUN apt-get dist-upgrade -y
+RUN apt-get dist-upgrade -y && apt-get upgrade -y
+
+RUN echo '================================================================='
+RUN figlet FUSENGINE Nodejs && \
+    echo 'fusengine.ch  info@fusengine.ch' && \
+    echo '' && \
+    echo '================================================================='
 
 # Cleanup
 RUN apt-get clean

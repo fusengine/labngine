@@ -14,13 +14,20 @@ RUN apt-get install -yqq \
                     zip \
                     unzip \
                     htop \
+                    figlet \
                     supervisor \
                     build-essential \
                     software-properties-common \
                     python-software-properties
-                    
+
 # Update
-RUN apt-get upgrade -y
+RUN echo '================================================================='
+RUN figlet FUSENGINE Nodejs && \
+    echo 'fusengine.ch  info@fusengine.ch' && \
+    echo '' && \
+    echo '================================================================='
+
+RUN apt-get dist-upgrade -y && apt-get upgrade -y
 
 # Expose port
 EXPOSE 22

@@ -1,4 +1,4 @@
-FROM ubuntu-upstart:latest
+FROM labengine/ubuntu-upstart
 
 MAINTAINER Fusengine <info@fusengine.ch>
 
@@ -8,6 +8,9 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv-keys 0x4f4ea0aae52
 
 # Update
 RUN apt-get update
+
+# Upgrade
+RUN apt-get dist-upgrade -y && apt-get upgrade -y
 
 # Cleanup
 RUN apt-get clean

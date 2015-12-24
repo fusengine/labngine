@@ -19,6 +19,7 @@ RUN apt-get install -y \
                     zip \
                     unzip \
                     htop \
+                    figlet \
                     supervisor \
                     build-essential \
                     software-properties-common \
@@ -27,6 +28,12 @@ RUN apt-get install -y \
 
 # Upgrade
 RUN apt-get dist-upgrade -y
+
+RUN echo '================================================================='
+RUN figlet FUSENGINE Nodejs && \
+    echo 'fusengine.ch  info@fusengine.ch' && \
+    echo '' && \
+    echo '================================================================='
 
 # Cleanup
 RUN apt-get clean
