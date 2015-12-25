@@ -4,9 +4,6 @@ MAINTAINER Fusengine <info@fusengine.ch>
 # add version nodejs
 ENV NODE_VERSION setup_5.x
 
-# Update Ubuntu and install curl
-# RUN figlet Fusengine Nodejs
-
 # Add Nodejs repos
 RUN curl -sL https://deb.nodesource.com/${NODE_VERSION}| sudo -E bash -
 
@@ -17,7 +14,7 @@ RUN apt-get update
 RUN apt-get install -y nodejs
 
 # Install grunt-cli
-RUN npm install -g grunt-cli
+RUN npm install -g grunt grunt-cli
 
 # Upgrade and dist-upgrade
 RUN apt-get dist-upgrade -y && apt-get upgrade -y
