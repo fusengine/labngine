@@ -6,7 +6,7 @@ ADD deps.sh /
 RUN chmod 775 /*.sh
 
 # Run buildpack
-RUN sh ./deps.sh
+RUN ./deps.sh
 
 # Expose port
 EXPOSE 22
