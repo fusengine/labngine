@@ -13,6 +13,8 @@ RUN apt-get update
 # Intall Nodejs
 RUN apt-get install -y nodejs
 
+RUN apt-get remove --purge curl -y
+
 # Install grunt-cli
 RUN npm install -g grunt grunt-cli
 
@@ -24,9 +26,9 @@ RUN apt-get clean
 
 # Create directory
 RUN mkdir /data
-RUN chmod 775 /data
 
-# WORKDIR
+# Volume and workdir
+VOLUME ["/data"]
 WORKDIR /data
 
 # version Nodejs

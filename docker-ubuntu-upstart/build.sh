@@ -1,5 +1,5 @@
 echo ''
-echo '                    Add ubuntu-upstart '
+echo '                    Add php7 repos '
 echo ''
 # Add Key to php7 && Add repos to install php 7
 apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv-keys 0x4f4ea0aae5267a6c
