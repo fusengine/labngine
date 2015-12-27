@@ -1,3 +1,9 @@
+UPDATE  = ap-get update
+INSTALL = apt-get install -y
+UPGRADE = apt-get upgrade -y
+
+
+
 echo ''
 echo '                    Add php7 repos '
 echo ''

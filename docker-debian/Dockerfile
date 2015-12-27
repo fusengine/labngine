@@ -1,12 +1,18 @@
-FROM debian
+FROM debian:latest
 MAINTAINER Fusengine <info@fusengine.ch>
 
+# ENV TO ADD PACKAGES
+# ENV PACKAGES_BUILDPACK
+
 # Add buildpack
-ADD deps.sh /
-RUN chmod 775 /*.sh
+COPY script_base/ /root
+RUN chmod 775 /root/*.sh
 
 # Run buildpack
-RUN ./deps.sh
+RUN ./root/build_default_pack.sh
+
+# list php7 package
+# RUN apt-cache search php7-*
 
 # Expose port
 EXPOSE 22
