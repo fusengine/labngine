@@ -39,6 +39,18 @@ update(){
   echo $END_UPDATE_MESSAGE
 }
 
+# Upgrade
+upgrade(){
+  echo $UPGRADE_MESSAGE
+  style_ubuntu
+
+  $UPGRADE
+  $DIST_UPGRADE
+
+  style_ubuntu
+  echo $END_UPGRADE_MESSAGE
+}
+
 # Clean ubuntu
 clean_ubuntu(){
   style_ubuntu
@@ -55,17 +67,6 @@ clean_ubuntu(){
   style_ubuntu
 }
 
-# Upgrade
-upgrade(){
-  echo $UPGRADE_MESSAGE
-  style_ubuntu
-
-  $UPGRADE
-  $DIST_UPGRADE
-
-  style_ubuntu
-  echo $END_UPGRADE_MESSAGE
-}
 
 # install packages
 install_packages(){
