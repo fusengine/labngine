@@ -5,7 +5,8 @@ UPDATE="apt-get update"
 INSTALL="apt-get install -y"
 UPGRADE="apt-get upgrade -y"
 DIST_UPGRADE="apt-get dist-upgrade -y"
-CLEANUP="apt-get clean apt-get autoclean"
+CLEANUP="apt-get clean -y && apt-get autoclean -y && apt-get autoremove -y && apt-get purge -y"
+
 
 # MESSAGE
 MESSAGE=" ==> Install package"

@@ -21,8 +21,11 @@ RUN npm install -g grunt grunt-cli
 # Upgrade and dist-upgrade
 RUN apt-get dist-upgrade -y && apt-get upgrade -y
 
-# Cleanup
-RUN apt-get clean
+# Autoremove Cleanup Purge
+RUN apt-get autoremove -y \
+    && apt-get purge -y \
+    && apt-get clean -y
+
 
 # Create directory
 RUN mkdir /data
