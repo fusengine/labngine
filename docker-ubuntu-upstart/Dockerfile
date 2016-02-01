@@ -1,9 +1,6 @@
 FROM ubuntu-upstart:latest
 MAINTAINER Fusengine <info@fusengine.ch>
 
-# ENV TO ADD PACKAGES
-# ENV PACKAGES_BUILDPACK
-
 # Add buildpack
 COPY script_base/ /root
 RUN chmod 775 /root/*.sh
