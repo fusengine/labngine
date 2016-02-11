@@ -63,7 +63,7 @@ upgrade(){
 }
 
 # Clean ubuntu
-clean_ubuntu(){
+clean_debian(){
   style_ubuntu
   echo $CLEAN_MESSAGE
   style_ubuntu
