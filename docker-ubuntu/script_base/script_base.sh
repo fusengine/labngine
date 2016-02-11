@@ -5,7 +5,8 @@ UPDATE="apt-get update"
 INSTALL="apt-get install -y"
 UPGRADE="apt-get upgrade -y"
 DIST_UPGRADE="apt-get dist-upgrade -y"
-CLEANUP="apt-get clean -y && apt-get autoclean -y && apt-get autoremove -y && apt-get purge -y"
+#CLEANUP="apt-get clean -y && apt-get autoclean -y && apt-get autoremove -y && apt-get purge -y"
+
 
 # MESSAGE
 MESSAGE=" ==> Install package"
@@ -26,6 +27,16 @@ style_ubuntu(){
   echo ""
 }
 
+clean_up(){
+  style_ubuntu
+
+  apt-get clean -y
+  apt-get autoclean -y
+  apt-get autoremove -y
+  apt-get purge -y
+
+  style_ubuntu
+}
 
 # update UBUNTU
 update(){
@@ -39,22 +50,6 @@ update(){
   echo $END_UPDATE_MESSAGE
 }
 
-# Clean ubuntu
-clean_ubuntu(){
-  style_ubuntu
-  echo $CLEAN_MESSAGE
-  style_ubuntu
-
-  if [[ $CLEANUP ]]; then
-    echo "Waithing clean up for Ubuntu"
-    $CLEANUP
-    echo $END_CLEAN
-  else
-    echo " Ubuntu not require clean up commande"
-  fi
-  style_ubuntu
-}
-
 # Upgrade
 upgrade(){
   echo $UPGRADE_MESSAGE
@@ -66,6 +61,23 @@ upgrade(){
   style_ubuntu
   echo $END_UPGRADE_MESSAGE
 }
+
+# Clean ubuntu
+clean_ubuntu(){
+  style_ubuntu
+  echo $CLEAN_MESSAGE
+  style_ubuntu
+
+  if [[ clean_up ]]; then
+    echo "Waithing clean up for Ubuntu"
+    clean_up
+    echo $END_CLEAN
+  else
+    echo " Ubuntu not require clean up commande"
+  fi
+  style_ubuntu
+}
+
 
 # install packages
 install_packages(){

@@ -1,17 +1,18 @@
 #!/bin/sh
 
-# update debian, clean Upgrade debian
+# update ubuntu, clean Upgrade ubuntu
 UPDATE="apt-get update"
-INSTALL="apt-get install -yqq"
+INSTALL="apt-get install -y"
 UPGRADE="apt-get upgrade -y"
 DIST_UPGRADE="apt-get dist-upgrade -y"
-CLEANUP="apt-get clean -y && apt-get autoclean -y && apt-get autoremove -y && apt-get purge -y"
+#CLEANUP="apt-get clean -y && apt-get autoclean -y && apt-get autoremove -y && apt-get purge -y"
+
 
 # MESSAGE
 MESSAGE=" ==> Install package"
 UPDATE_MESSAGE=" ==>  Update"
 UPGRADE_MESSAGE=" ==> Upgrade"
-CLEAN_MESSAGE=" ==> start Clean debian"
+CLEAN_MESSAGE=" ==> start Clean Debian"
 
 # End Message
 END_UPDATE_MESSAGE=" Update Done !"
@@ -21,77 +22,88 @@ END_CLEAN="Clean Done !"
 
 
 # Ubuntu style
-style_debian(){
+style_ubuntu(){
   echo ""
   echo ""
 }
 
+clean_up(){
+  style_ubuntu
+
+  apt-get clean -y
+  apt-get autoclean -y
+  apt-get autoremove -y
+  apt-get purge -y
+
+  style_ubuntu
+}
 
 # update UBUNTU
 update(){
-  style_debian
+  style_ubuntu
   echo $UPDATE_MESSAGE
-  style_debian
+  style_ubuntu
 
   $UPDATE
 
-  style_debian
+  style_ubuntu
   echo $END_UPDATE_MESSAGE
-}
-
-# Clean ubuntu
-clean_debian(){
-  style_debian
-  echo $CLEAN_MESSAGE
-  style_debian
-
-  if [[ $CLEANUP ]]; then
-    echo "Waithing clean up for debian "
-    $CLEANUP
-    echo $END_CLEAN
-  else
-    echo " debian not require clean up commande"
-  fi
-  style_debian
 }
 
 # Upgrade
 upgrade(){
   echo $UPGRADE_MESSAGE
-  style_debian
+  style_ubuntu
 
   $UPGRADE
   $DIST_UPGRADE
 
-  style_debian
+  style_ubuntu
   echo $END_UPGRADE_MESSAGE
 }
 
+# Clean ubuntu
+clean_ubuntu(){
+  style_ubuntu
+  echo $CLEAN_MESSAGE
+  style_ubuntu
+
+  if [[ clean_up ]]; then
+    echo "Waithing clean up for Debian"
+    clean_up
+    echo $END_CLEAN
+  else
+    echo " Debian  not require clean up commande"
+  fi
+  style_ubuntu
+}
+
+
 # install packages
 install_packages(){
-  style_debian
+  style_ubuntu
   if [[ -e $PACKAGES_ENV_DOCKERFILES  ]]; then
     echo "Install Packages in Env Dockerfile detected $PACKAGES_ENV_DOCKERFILES"
 
     echo " >>>>>>>>> Install Waithing"
-    style_debian
+    style_ubuntu
     $INSTALL $PACKAGES_ENV_DOCKERFILES
 
     echo " ==> Install Done to Env Dockerfile"
-    style_debian
+    style_ubuntu
   elif [[ $PACKAGES_DEFAULT ]]; then
 
     echo $MESSAGE
-    style_debian
+    style_ubuntu
     $INSTALL $PACKAGES_DEFAULT
 
     echo $END_MESSAGE
-    style_debian
+    style_ubuntu
   else
-    style_debian
+    style_ubuntu
     echo "Packages is not Installed if you want install package use ENV PACKAGES_ENV_DOCKERFILES"
-    style_debian
+    style_ubuntu
   fi
 
-  style_debian
+  style_ubuntu
 }
