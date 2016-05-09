@@ -1,7 +1,7 @@
 ![Alt text](http://fusengine.ch/img/centos.svg)
 ===============================================
 
-This is centos latest to update and upgrade
+< This is centos latest to update and upgrade >
 
 ### Install default packages
 
