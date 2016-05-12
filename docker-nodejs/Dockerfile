@@ -1,4 +1,4 @@
-FROM labengine/ubuntu-xenial
+FROM labengine/ubuntu-upstart
 MAINTAINER Fusengine <info@fusengine.ch>
 
 # add version nodejs
