@@ -1,4 +1,4 @@
-FROM ubuntu:xenial-20160331.1
+FROM ubuntu
 MAINTAINER Fusengine <info@fusengine.ch>
 
 # Add buildpack

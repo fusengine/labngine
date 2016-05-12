@@ -1,8 +1,8 @@
-FROM labengine/ubuntu-upstart
+FROM labengine/ubuntu-xenial
 MAINTAINER Fusengine <info@fusengine.ch>
 
 # add version nodejs
-ENV NODE_VERSION setup_5.x
+ENV NODE_VERSION setup_6.x
 
 # Add Nodejs repos
 RUN curl -sL https://deb.nodesource.com/${NODE_VERSION}| sudo -E bash -
