@@ -3,9 +3,14 @@
 # add script function
 source /root/script_base.sh
 
+NODE_V=${NODE_VERSION}
+
+# Nodejs
+curl -sL https://deb.nodesource.com/$NODE_V | bash -
+
+
 # add packages
-PACKAGES_DEFAULT="vim curl wget git zip unzip htop supervisor build-essential \
-                  software-properties-common python-software-properties language-pack-en-base"
+PACKAGES_DEFAULT="nodejs"
 
 # Env package to dockerfile
 PACKAGES_ENV_DOCKERFILES=${PACKAGES_BUILDPACK}
@@ -21,3 +26,9 @@ upgrade
 
 # Clean ubuntu
 clean_ubuntu
+
+# Purge curl
+apt-get remove --purge curl -y
+
+# NPM install
+npm install -g grunt grunt-cli

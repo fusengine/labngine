@@ -1,13 +1,13 @@
-![Alt text](http://fusengine.ch/img/ubuntu2.svg)
-================================================
+![Alt text](http://fusengine.ch/img/ubuntu2-docker-xenial.svg)
+===================================================
 
-This is ubuntu latest to update and upgrade
+This is Ubuntu latest ( Xenial ) to update and upgrade
 
 ### Install default packages
 
 ```
 vim, wget, curl, git, vim, openssh-server
-zip, unzip, htop, supervisor, php7
+zip, unzip, htop, supervisor
 ```
 
 ### php7
@@ -47,4 +47,4 @@ php7.0-opcache - Zend OpCache module for PHP
 php7.0-bz2 - bzip2 module for PHP
 ```
 
-&copy; 2015 [Fusengine](http://fusengine.com)
+&copy; 2016 [Fusengine](http://fusengine.com)

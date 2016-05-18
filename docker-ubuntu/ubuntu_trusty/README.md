@@ -1,13 +1,13 @@
-![Alt text](http://www.fusengine.ch/img/ubuntu.svg)
-===================================================
+![Alt text](http://fusengine.ch/img/ubuntu2.svg)
+================================================
 
-This is Ubuntu-upstart to update and upgrade
+This is ubuntu latest to update and upgrade
 
 ### Install default packages
 
 ```
 vim, wget, curl, git, vim, openssh-server
-zip, unzip, htop, supervisor
+zip, unzip, htop, supervisor, php7
 ```
 
 ### php7
