@@ -11,7 +11,8 @@ RUN chmod 775 /root/*.sh
 # Run buildpack
 RUN ./root/build_default_pack.sh
 
-# list php7 package => RUN apt-cache search php7-* Expose ssh => EXPOSE 22
+# [ list php7 package => RUN apt-cache search php7-* ] 
+# [ Expose ssh => EXPOSE 22 ]
 
 # start ubuntu
 CMD ["/bin/bash"]
