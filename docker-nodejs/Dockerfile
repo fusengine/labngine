@@ -8,7 +8,7 @@ ENV NODE_VERSION setup_6.x
 COPY install-node.sh /root/install-node.sh
 RUN chmod 775 /root/install-node.sh
 
-# Run buildpack
+# Run buildpack install and update
 RUN ./root/install-node.sh
 
 # Create directory

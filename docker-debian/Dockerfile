@@ -4,7 +4,7 @@ MAINTAINER Fusengine <info@fusengine.ch>
 # ENV TO ADD PACKAGES
 # ENV PACKAGES_BUILDPACK
 
-# Add buildpack
+# Add buildpack install and update
 COPY script_base/ /root
 RUN chmod 775 /root/*.sh
 
