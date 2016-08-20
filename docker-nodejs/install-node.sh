@@ -8,7 +8,6 @@ NODE_V=${NODE_VERSION}
 # Nodejs
 curl -sL https://deb.nodesource.com/$NODE_V | bash -
 
-
 # add packages
 PACKAGES_DEFAULT="nodejs"
 

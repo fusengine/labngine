@@ -11,6 +11,7 @@ zip, unzip, htop, supervisor
 ```
 
 ### php7
+`Search packages => apt-cache search`
 
 ```
 php7.0-common - Common files for packages built from the PHP source
