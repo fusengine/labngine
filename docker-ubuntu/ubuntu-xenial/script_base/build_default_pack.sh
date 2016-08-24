@@ -4,7 +4,7 @@
 source /root/script_base.sh
 
 # add packages
-PACKAGES_DEFAULT="vim curl wget git zip unzip htop supervisor build-essential \
+PACKAGES_DEFAULT="vim curl sudo wget git zip unzip htop supervisor build-essential \
                   software-properties-common python-software-properties language-pack-en-base"
 
 # Env package to dockerfile

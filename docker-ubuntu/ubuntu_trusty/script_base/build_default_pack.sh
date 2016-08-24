@@ -12,7 +12,7 @@ echo "deb http://ppa.launchpad.net/ondrej/php/ubuntu trusty main" > /etc/apt/sou
 
 
 # add packages
-PACKAGES_DEFAULT="vim curl wget git zip unzip htop figlet supervisor build-essential \
+PACKAGES_DEFAULT="vim curl sudo wget git zip unzip htop figlet supervisor build-essential \
                   software-properties-common python-software-properties language-pack-en-base"
 
 # Env package to dockerfile

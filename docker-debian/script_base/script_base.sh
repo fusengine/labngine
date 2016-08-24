@@ -34,6 +34,7 @@ clean_up(){
   apt-get autoclean -y
   apt-get autoremove -y
   apt-get purge -y
+  rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
   style_ubuntu
 }

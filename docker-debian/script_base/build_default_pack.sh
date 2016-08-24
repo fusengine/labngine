@@ -6,7 +6,7 @@ source /root/script_base.sh
 apt update
 
 # add packages
-PACKAGES_DEFAULT="vim curl wget git zip unzip htop figlet supervisor \
+PACKAGES_DEFAULT="vim sudo curl wget git zip unzip htop figlet supervisor \
                   build-essential software-properties-common python-software-properties"
 
 # Env package to dockerfile
