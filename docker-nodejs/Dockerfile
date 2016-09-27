@@ -1,6 +1,7 @@
 FROM labengine/ubuntu
 MAINTAINER Fusengine <info@fusengine.ch>
 
+
 # add version nodejs
 ENV NODE_VERSION setup_6.x
 
