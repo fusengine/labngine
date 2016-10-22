@@ -1,4 +1,4 @@
-![Alt text](http://fusengine.ch/img/ubuntu2-docker-xenial.svg)
+![Alt text](http://fusengine.ch/img/ubuntu2.svg)
 ===================================================
 
 This is Ubuntu Xenial to update and upgrade
