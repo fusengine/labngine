@@ -1,6 +1,3 @@
-# =>  [ list php7 package => RUN apt-cache search php7-* ]
-# =>  [ Expose ssh => EXPOSE 22 ]
-
 FROM ubuntu
 MAINTAINER Fusengine <info@fusengine.ch>
 
@@ -13,3 +10,6 @@ RUN ./root/build_default_pack.sh
 
 # pepare for takeoff
 CMD ["/bin/bash"]
+
+# =>  [ list php7 package => RUN apt-cache search php7-* ]
+# =>  [ Expose ssh => EXPOSE 22 ]
