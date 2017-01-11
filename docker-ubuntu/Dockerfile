@@ -1,7 +1,7 @@
 FROM ubuntu
 MAINTAINER Fusengine <info@fusengine.ch>
 
-# Add buildpack
+# Add buildpack ubuntu
 COPY script_base/ /root
 RUN chmod 775 /root/*.sh
 
