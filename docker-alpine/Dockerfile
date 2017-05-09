@@ -1,19 +1,13 @@
 FROM alpine
 MAINTAINER Fusengine <info@fusengine.ch>
 
-# update alpine
-RUN apk update --no-cache && apk upgrade --no-cache
+# create repository to script
+RUN mkdir -p /root/.script_base
+RUN chmod 777 /root/.script_base
 
-# Add Repos php7.0 and php7.1
-#RUN wget -O /etc/apk/keys/php-alpine.rsa.pub http://php.codecasts.rocks/php-alpine.rsa.pub && \
-#    echo "http://php.codecasts.rocks/7.0" >> /etc/apk/repositories && \
-#    echo "http://php.codecasts.rocks/7.1" >> /etc/apk/repositories
+# Add buildpack script alpine
+COPY scripts_base/ /root/.script_base
+RUN chmod +x /root/.script_base/*
 
-# update alpine
-RUN apk --no-cache update && apk --no-cache upgrade
-
-# install package
-RUN apk --no-cache add --update vim openrc htop curl git zip unzip
-
-# Clean cache
-RUN rm -rf /var/cache/apk/*
+# Run script
+RUN ./root/.script_base/build

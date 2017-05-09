@@ -27,6 +27,20 @@ style_ubuntu(){
   echo ""
 }
 
+# loading
+load()
+{
+    sleep 10 & PID=$! #simulate a long process
+    echo " IN PROGRESS!"
+    printf "["
+    # While process is running...
+    while kill -0 $PID 2> /dev/null; do 
+        printf  "▉"
+        sleep 1
+    done
+    printf "] \n"
+}
+
 clean_up(){
   style_ubuntu
 
@@ -71,6 +85,7 @@ clean_ubuntu(){
 
   if [[ clean_up ]]; then
     echo "Waithing clean up for Ubuntu"
+    load
     clean_up
     echo $END_CLEAN
   else
@@ -86,7 +101,8 @@ install_packages(){
   if [[ -e $PACKAGES_ENV_DOCKERFILES  ]]; then
     echo "Install Packages in Env Dockerfile detected $PACKAGES_ENV_DOCKERFILES"
 
-    echo " >>>>>>>>> Install Waithing"
+    echo "Install Waithing"
+    load
     style_ubuntu
     $INSTALL $PACKAGES_ENV_DOCKERFILES
 
