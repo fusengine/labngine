@@ -4,7 +4,7 @@
 source /root/.script_base/base
 
 # Add pack
-PACK_DEFAULT="vim openrc htop curl git zip unzip openssh"
+PACK_DEFAULT="vim openrc htop curl git zip unzip openssh ca-certificates openssl"
 
 # update system
 update_sys
