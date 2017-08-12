@@ -3,7 +3,7 @@ MAINTAINER Fusengine <info@fusengine.ch>
 
 
 # add version nodejs
-ENV NODE_VERSION setup_8.x
+ENV NODE_VERSION setup_7.x
 
 # Add buildpack
 COPY install-node.sh /root/install-node.sh
