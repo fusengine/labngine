@@ -28,7 +28,7 @@ load()
     echo " IN PROGRESS!"
     printf "["
     # While process is running...
-    while kill -0 $PID 2> /dev/null; do 
+    while kill -0 $PID 2> /dev/null; do
         printf  "▉"
         sleep 1
     done

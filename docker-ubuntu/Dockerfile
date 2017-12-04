@@ -1,5 +1,6 @@
 FROM ubuntu
 MAINTAINER Fusengine <info@fusengine.ch>
+ENV TIMEZONE "Europe/Zurich"
 
 # Add buildpack ubuntu
 COPY script_base/ /root

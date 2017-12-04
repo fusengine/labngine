@@ -1,5 +1,6 @@
 FROM alpine
 MAINTAINER Fusengine <info@fusengine.ch>
+ENV TIMEZONE "Europe/Zurich"
 
 # create repository to script
 RUN mkdir -p /root/.script_base

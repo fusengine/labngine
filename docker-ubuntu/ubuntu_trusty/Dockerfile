@@ -1,6 +1,6 @@
 FROM ubuntu:14.04.4
 MAINTAINER Fusengine <info@fusengine.ch>
-
+ENV TIMEZONE "Europe/Zurich"
 
 # ENV TO ADD PACKAGES
 # ENV PACKAGES_BUILDPACK

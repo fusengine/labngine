@@ -3,6 +3,9 @@
 # add script function
 source /root/script_base.sh
 
+# time zone docker
+TIME=${TIMEZONE}
+
 # add repos ondrej
 apt-key adv --keyserver hkp://keyserver.ubuntu.com --recv-keys 0x4f4ea0aae5267a6c
 echo "deb http://ppa.launchpad.net/ondrej/apache2/ubuntu xenial main" > /etc/apt/sources.list.d/apache2.list
@@ -24,6 +27,11 @@ update
 
 # Install_packages
 install_packages
+
+# Setting timezone
+echo $TIME
+cp /usr/share/zoneinfo/$TIME /etc/localtime
+echo "$TIME" > /etc/timezone
 
 # Upgrade ubuntu
 upgrade
