@@ -25,7 +25,6 @@ echo $TIME
 cp /usr/share/zoneinfo/$TIME /etc/localtime
 echo "$TIME" > /etc/timezone
 
-
 # clean system
 clean
 
