@@ -1,6 +1,6 @@
 FROM debian:latest
-MAINTAINER Fusengine <info@fusengine.ch>
 
+LABEL maintainer="Fusengine <info@fusengine.ch>"
 
 # ENV TO ADD PACKAGES
 # ENV PACKAGES_BUILDPACK

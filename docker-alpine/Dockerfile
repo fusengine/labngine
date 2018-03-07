@@ -1,5 +1,6 @@
 FROM alpine
-MAINTAINER Fusengine <info@fusengine.ch>
+LABEL maintainer="Fusengine <info@fusengine.ch>"
+
 ENV TIMEZONE "Europe/Zurich"
 
 # create repository to script
@@ -12,3 +13,6 @@ RUN chmod +x /root/.script_base/*
 
 # Run script
 RUN ./root/.script_base/build
+
+# RUN ZSH
+ENTRYPOINT [ "zsh" ]

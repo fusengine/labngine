@@ -1,5 +1,5 @@
 FROM ubuntu
-MAINTAINER Fusengine <info@fusengine.ch>
+LABEL maintainer="Fusengine <info@fusengine.ch>"
 ENV TIMEZONE "Europe/Zurich"
 
 # Add buildpack
