@@ -14,5 +14,9 @@ RUN chmod +x /root/.script_base/*
 # Run script
 RUN ./root/.script_base/build
 
+RUN sed -i -e "s/bin\/ash/bin\/zsh/" /etc/passwd
+
+ENV SHELL /bin/zsh
+
 # RUN ZSH
-ENTRYPOINT [ "zsh" ]
+CMD [ "zsh",  "--version"]
