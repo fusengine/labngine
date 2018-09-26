@@ -16,6 +16,7 @@ RUN ./root/.script_base/build
 
 RUN sed -i -e "s/bin\/ash/bin\/zsh/" /etc/passwd
 
+# Run shell
 ENV SHELL /bin/zsh
 
 # RUN ZSH
