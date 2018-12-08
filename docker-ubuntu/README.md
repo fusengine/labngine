@@ -1,7 +1,6 @@
 ![Alt text](http://fusengine.ch/img/ubuntu2.svg)
 ===================================================
 
-
 This is Ubuntu latest ( Xenial ) to update and upgrade
 
 ### Install default packages
